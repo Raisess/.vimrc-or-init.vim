@@ -5,18 +5,18 @@ Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
 Plug 'ajh17/vimcompletesme'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
+" set showtabline=2
 set noswapfile
 set nobackup
 set nowritebackup
 set number relativenumber
-set cmdheight=1
+set cmdheight=2
 set smarttab
 set cindent
 set autoindent
@@ -43,14 +43,21 @@ colorscheme solarized
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
 
+" popup color
+highlight Pmenu ctermfg=black ctermbg=grey guifg=black guibg=gray
+highlight PmenuSel term=bold ctermfg=black ctermbg=cyan guifg=black guibg=cyan
+highlight PmenuThumb ctermbg=yellow guibg=yellow
+highlight PmenuSbar ctermbg=grey guibg=grey
+
 let g:netrw_banner=0
 
 if !has('gui_running')
   set t_Co=256
 endif
 
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
+" Airline config
+" let g:airline#extensions#tabline#enabled=1
+" let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts=1
 
@@ -59,7 +66,7 @@ let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrowExpandable='▸'
 let g:NERDTreeDirArrowCollapsible='▾'
-let g:NERDTreeIgnore=[]
+let g:NERDTreeIgnore=['^.git$[[dir]]', '^node_modules$[[dir]]']
 let g:NERDTreeStatusline='NERDTree'
 let g:NERDTreeQuitOnOpen=1
 " Automaticaly close nvim if NERDTree is only thing left open
