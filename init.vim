@@ -1,13 +1,14 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'tomasr/molokai'
+Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
 Plug 'ajh17/vimcompletesme'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'altercation/vim-colors-solarized'
 
 call plug#end()
 
@@ -38,7 +39,7 @@ set formatoptions=l
 set textwidth=0 wrapmargin=0
 
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme molokai
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
@@ -58,7 +59,7 @@ endif
 " Airline config
 " let g:airline#extensions#tabline#enabled=1
 " let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline_theme='solarized'
+let g:airline_theme='molokai'
 let g:airline_powerline_fonts=1
 
 " NERDTree config
