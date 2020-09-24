@@ -17,7 +17,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set number relativenumber
-set cmdheight=2
+set cmdheight=1
 set smarttab
 set cindent
 set autoindent
@@ -57,8 +57,8 @@ if !has('gui_running')
 endif
 
 " Airline config
-" let g:airline#extensions#tabline#enabled=1
-" let g:airline#extensions#tabline#formatter='unique_tail'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts=1
 
