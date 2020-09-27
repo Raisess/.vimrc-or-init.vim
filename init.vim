@@ -17,7 +17,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set number relativenumber
-set cmdheight=1
+set cmdheight=2
 set smarttab
 set cindent
 set autoindent
@@ -38,7 +38,8 @@ set nowrap
 set formatoptions=l
 set textwidth=0 wrapmargin=0
 
-let g:solarized_termcolors=256
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
@@ -57,8 +58,8 @@ if !has('gui_running')
 endif
 
 " Airline config
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#formatter='unique_tail'
+"let g:airline#extensions#tabline#enabled=1
+"let g:airline#extensions#tabline#formatter='unique_tail'
 let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts=1
 
