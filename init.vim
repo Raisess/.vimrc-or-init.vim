@@ -17,7 +17,7 @@ set noswapfile
 set nobackup
 set nowritebackup
 set number relativenumber
-set cmdheight=2
+set cmdheight=1
 set smarttab
 set cindent
 set autoindent
