@@ -1,7 +1,6 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
@@ -12,7 +11,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
-" set showtabline=2
 set noswapfile
 set nobackup
 set nowritebackup
@@ -38,9 +36,7 @@ set nowrap
 set formatoptions=l
 set textwidth=0 wrapmargin=0
 
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
+colorscheme koehler
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
@@ -57,11 +53,8 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-" Airline config
-"let g:airline#extensions#tabline#enabled=1
-"let g:airline#extensions#tabline#formatter='unique_tail'
-let g:airline_theme='base16_gruvbox_dark_hard'
-let g:airline_powerline_fonts=1
+let g:airline_theme='base16_greenscreen'
+"let g:airline_powerline_fonts=1
 
 " NERDTree config
 let g:NERDTreeShowHidden=1
