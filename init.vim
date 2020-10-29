@@ -1,6 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
@@ -36,7 +37,9 @@ set nowrap
 set formatoptions=l
 set textwidth=0 wrapmargin=0
 
-colorscheme koehler
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
+colorscheme gruvbox
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
@@ -53,14 +56,14 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:airline_theme='base16_greenscreen'
-"let g:airline_powerline_fonts=1
+let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_powerline_fonts=1
 
 " NERDTree config
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
-let g:NERDTreeDirArrowExpandable='▸'
-let g:NERDTreeDirArrowCollapsible='▾'
+let g:NERDTreeDirArrowExpandable='>'
+let g:NERDTreeDirArrowCollapsible='-'
 let g:NERDTreeIgnore=['^.git$[[dir]]', '^node_modules$[[dir]]']
 let g:NERDTreeStatusline='NERDTree'
 let g:NERDTreeQuitOnOpen=1
