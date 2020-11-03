@@ -57,7 +57,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:airline_theme='onedark'
+let g:airline_theme='base16_nord'
 let g:airline_powerline_fonts=1
 
 " NERDTree config
