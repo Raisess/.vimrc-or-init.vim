@@ -63,7 +63,7 @@ let g:airline_powerline_fonts=1
 " NERDTree config
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
-let g:NERDTreeDirArrowExpandable='>'
+let g:NERDTreeDirArrowExpandable='+'
 let g:NERDTreeDirArrowCollapsible='-'
 let g:NERDTreeIgnore=['^.git$[[dir]]', '^node_modules$[[dir]]']
 let g:NERDTreeStatusline='NERDTree'
