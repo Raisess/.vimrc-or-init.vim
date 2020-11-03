@@ -1,6 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'joshdick/onedark.vim'
 Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
@@ -37,9 +38,9 @@ set nowrap
 set formatoptions=l
 set textwidth=0 wrapmargin=0
 
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
+"let g:gruvbox_contrast_dark='hard'
+"let g:gruvbox_invert_selection='0'
+colorscheme onedark
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
@@ -56,7 +57,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:airline_theme='base16_gruvbox_dark_hard'
+let g:airline_theme='onedark'
 let g:airline_powerline_fonts=1
 
 " NERDTree config
