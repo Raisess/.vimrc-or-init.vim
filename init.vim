@@ -1,12 +1,13 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
+Plug 'neoclide/coc.nvim'
 Plug 'joshdick/onedark.vim'
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
-Plug 'ajh17/vimcompletesme'
+"Plug 'ajh17/vimcompletesme'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -37,6 +38,8 @@ set noshowmode
 set nowrap
 set formatoptions=l
 set textwidth=0 wrapmargin=0
+set updatetime=300
+set shortmess+=c
 
 "let g:gruvbox_contrast_dark='hard'
 "let g:gruvbox_invert_selection='0'
@@ -44,12 +47,6 @@ colorscheme onedark
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
-
-" popup color
-highlight Pmenu ctermfg=black ctermbg=grey guifg=black guibg=gray
-highlight PmenuSel term=bold ctermfg=black ctermbg=cyan guifg=black guibg=cyan
-highlight PmenuThumb ctermbg=yellow guibg=yellow
-highlight PmenuSbar ctermbg=grey guibg=grey
 
 let g:netrw_banner=0
 
@@ -72,4 +69,16 @@ let g:NERDTreeQuitOnOpen=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+
+" CoC
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
