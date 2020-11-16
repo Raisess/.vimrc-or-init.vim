@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim'
 Plug 'joshdick/onedark.vim'
+Plug 'APZelos/blamer.nvim'
 "Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
@@ -40,6 +41,11 @@ set formatoptions=l
 set textwidth=0 wrapmargin=0
 set updatetime=300
 set shortmess+=c
+
+let g:blamer_enabled=1
+let g:blamer_delay=100
+let g:blamer_show_in_visual_modes=0
+let g:blamer_show_in_insert_modes=0
 
 "let g:gruvbox_contrast_dark='hard'
 "let g:gruvbox_invert_selection='0'
