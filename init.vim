@@ -1,14 +1,12 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim'
 Plug 'joshdick/onedark.vim'
-Plug 'APZelos/blamer.nvim'
-"Plug 'morhetz/gruvbox'
+Plug 'neoclide/coc.nvim'
+Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'raimondi/delimitmate'
 Plug 'sheerun/vim-polyglot'
-"Plug 'ajh17/vimcompletesme'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -42,13 +40,10 @@ set textwidth=0 wrapmargin=0
 set updatetime=300
 set shortmess+=c
 
-let g:blamer_enabled=1
-let g:blamer_delay=100
-let g:blamer_show_in_visual_modes=0
-let g:blamer_show_in_insert_modes=0
-
 "let g:gruvbox_contrast_dark='hard'
 "let g:gruvbox_invert_selection='0'
+"colorscheme gruvbox
+
 colorscheme onedark
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
@@ -87,4 +82,3 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
