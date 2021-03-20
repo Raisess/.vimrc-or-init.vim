@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -40,11 +40,11 @@ set textwidth=0 wrapmargin=0
 set updatetime=300
 set shortmess+=c
 
-"let g:gruvbox_contrast_dark='hard'
-"let g:gruvbox_invert_selection='0'
-"colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_invert_selection='0'
+colorscheme gruvbox
 
-colorscheme onedark
+"colorscheme onedark
 
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
@@ -55,7 +55,7 @@ if !has('gui_running')
   set t_Co=256
 endif
 
-let g:airline_theme='base16_nord'
+let g:airline_theme='base16_gruvbox_dark_hard'
 let g:airline_powerline_fonts=1
 
 " NERDTree config
