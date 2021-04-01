@@ -1,7 +1,9 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-"Plug 'joshdick/onedark.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 Plug 'neoclide/coc.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'maxmellon/vim-jsx-pretty'
@@ -44,8 +46,6 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 
-"colorscheme onedark
-
 highlight LineNr term=bold ctermfg=DarkGrey guifg=DarkGrey
 highlight Comment ctermfg=DarkGrey
 
@@ -82,3 +82,7 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" FZF
+nnoremap <silent> <C-f> :GFiles<CR>
+
